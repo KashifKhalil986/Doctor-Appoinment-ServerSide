@@ -98,7 +98,7 @@ export const loginUser = async (req, res) => {
 
 export const getProfile = async (req, res) => {
   try {
-    console.log("User ID:", req.userId);
+    // console.log("User ID:", req.userId);
 
     const userData = await userModel.findById(req.userId).select("-password");
 
@@ -114,7 +114,7 @@ export const getProfile = async (req, res) => {
       userData,
     });
   } catch (error) {
-    console.error("Get Profile Error:", error);
+    // console.error("Get Profile Error:", error);
 
     return res.status(500).json({
       success: false,
@@ -162,7 +162,7 @@ export const updateProfile = async (req, res) => {
       userData: updatedUser,
     });
   } catch (error) {
-    console.error("Update Profile Error:", error);
+    // console.error("Update Profile Error:", error);
 
     return res.status(500).json({
       success: false,

@@ -14,7 +14,12 @@ connectDB();
 connectCloudinary();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin:[
+    "http://localhost:5173",
+    "https://doctor-appoinment-git-main-kashifkhalil986s-projects.vercel.app"
+  ],
+}));
 
 //api endpoints
 app.use("/api/admin", adminRouter);
