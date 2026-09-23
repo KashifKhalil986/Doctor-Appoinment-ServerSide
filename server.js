@@ -19,6 +19,7 @@ app.use(cors({
     "http://localhost:5173",
     "https://doctor-appoinment-git-main-kashifkhalil986s-projects.vercel.app"
   ],
+  credentials:true
 }));
 
 //api endpoints
