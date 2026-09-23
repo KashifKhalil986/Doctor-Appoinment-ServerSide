@@ -17,6 +17,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:5174",
   "https://doctor-appoinment-zeta.vercel.app",
+  "https://doctor-appointment-admin-panel-ecru.vercel.app",
   process.env.FRONTEND_URL,
   process.env.ADMIN_URL,
 ].filter(Boolean);
