@@ -13,13 +13,19 @@ const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5174",
+  "https://doctor-appoinment.vercel.app",
+  "https://doctor-appoinment-git-main-kashifkhalil986s-projects.vercel.app",
+  process.env.FRONTEND_URL,
+  process.env.ADMIN_URL,
+].filter(Boolean);
+
 app.use(express.json());
 app.use(cors({
-  origin:[
-    "http://localhost:5173",
-    "https://doctor-appoinment-git-main-kashifkhalil986s-projects.vercel.app"
-  ],
-  credentials:true
+  origin: allowedOrigins,
+  credentials: true,
 }));
 
 //api endpoints
